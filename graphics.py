@@ -11,84 +11,48 @@ def drawgallows(x, score):
 	print 'Your score so far: %d' %(score)
 	
 	if x == 1:
-		print '                '
-		print '                '
-		print '                '
-		print '                '
-		print '                '
-		print '                '
+		print '                 \n' * 6
 		print '   _____        '
+		return None
 	elif x == 2:
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '   __|__        '
-	elif x == 3:
-		print '     |--------  '
-		print '     | /        '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '   __|__        '
-	elif x == 4:
-		print '     |--------  '
+		print '\n     |           ' * 6
+		print '   __|__'
+		return None
+	else: 
+		print '\n     |--------  '
+
+	if x == 3:
+		print '     | / '
+	else:
 		print '     | /     |  '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '   __|__        '
-	elif x == 5:
-		print '     |--------  '
-		print '     | /     |  '
-		print '     |       o  '
-		print '     |          '
-		print '     |          '
-		print '     |          '
-		print '   __|__        '
-	elif x == 6:
-		print '     |--------  '
-		print '     | /     |  '
-		print '     |       o  '
-		print '     |       l  '
-		print '     |          '
-		print '     |          '
-		print '   __|__        '
-	elif x == 7:
-		print '     |--------  '
-		print '     | /     |  '
-		print '     |       o  '
-		print '     |       l  '
-		print '     |      /   '
-		print '     |          '
-		print '   __|__        '
-	elif x == 8:
-		print '     |--------  '
-		print '     | /     |  '
-		print '     |       o  '
-		print '     |       l  '
-		print '     |      / \ '
-		print '     |          '
-		print '   __|__        '
+
+
+	if x == 4:
+		print '     |'
+	if x > 4 and x < 9:
+		print '     |       o  ' 
 	elif x == 9:
-		print '     |--------  '
-		print '     | /     |  '
-		print '     |       o/ '
-		print '     |       l  '
-		print '     |      / \ '
-		print '     |          '
-		print '   __|__        '
-	elif x == 10:
-		print '     |--------  '
-		print '     | /     |  '
+		print '     |       o/ ' 
+	elif x ==10:
 		print '     |      \o/ '
+
+
+	if x > 5:
 		print '     |       l  '
-		print '     |      / \ '
+	else:
 		print '     |          '
-		print '   __|__        '
-		print ''
-		print '    GAME OVER   '
+
+	if x == 7:
+		print '     |      /   '
+	elif x > 7: 
+		print '     |      / \ '
+	else:
+		print '     |'
+
+	print '     |          '
+	print '   __|__        '
+
+	if x == 10: 
+		print '\n    GAME OVER \n'
+
+	return None
